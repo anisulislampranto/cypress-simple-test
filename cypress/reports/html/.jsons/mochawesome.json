@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-11T17:34:08.077Z",
+    "end": "2022-12-11T17:34:18.496Z",
+    "duration": 10419,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cdbfe47c-3d3c-4c8c-950d-40515fb781d8",
+      "title": "",
+      "fullFile": "cypress/integration/accomplishments.spec.js",
+      "file": "cypress/integration/accomplishments.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bedd7fc7-d5ae-4340-8b95-35cab0b73b18",
+          "title": "Accomplishment Dashboard",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should showcase error if information is missing",
+              "fullTitle": "Accomplishment Dashboard should showcase error if information is missing",
+              "timedOut": null,
+              "duration": 5620,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-cy=\"accomplishment-title-input\"]').type(\"hello there\");\ncy.get('[data-cy=\"accomplishment-input\"]').type(\"hello there\");\ncy.contains(\"Submit Accomplishment\").click();\ncy.contains(\"Complete the items above to continue\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "f3c0a388-b207-4bc4-8f96-7eb8d530a249",
+              "parentUUID": "bedd7fc7-d5ae-4340-8b95-35cab0b73b18",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display validation component if all information is input",
+              "fullTitle": "Accomplishment Dashboard should display validation component if all information is input",
+              "timedOut": null,
+              "duration": 4759,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-cy=\"accomplishment-title-input\"]').type(\"hello there\");\ncy.get('[data-cy=\"accomplishment-input\"]').type(\"hello there\");\ncy.get('[data-cy=\"accomplishment-checkbox\"]').click();\ncy.get(\".Accomplishment-btn\").click();\ncy.contains(\"This Accomplisment was Successfully Submitted\").should(\"be.visible\");\ncy.get(\".Accomplishment-btn\").click();",
+              "err": {},
+              "uuid": "7371ec58-aaae-4acc-b9a1-4f273129de8d",
+              "parentUUID": "bedd7fc7-d5ae-4340-8b95-35cab0b73b18",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f3c0a388-b207-4bc4-8f96-7eb8d530a249",
+            "7371ec58-aaae-4acc-b9a1-4f273129de8d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10379,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
